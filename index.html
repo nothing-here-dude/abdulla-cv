@@ -408,6 +408,33 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Video Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: var(--card);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 1rem;
+        }
+
+        .video-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -426,6 +453,7 @@
                 <button onclick="scrollToSection('personal-life')">Personal Life</button>
                 <button onclick="scrollToSection('resume')">Resume</button>
                 <button onclick="scrollToSection('projects')">Projects</button>
+                <button onclick="scrollToSection('video')">Video</button>
                 <button onclick="scrollToSection('contact')">Contact</button>
             </div>
         </div>
@@ -666,8 +694,48 @@
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section id="video">
+        <div class="container">
+            <h2>Featured <span class="text-primary">Presentation</span></h2>
+            <div class="section-title-underline"></div>
+
+            <div class="video-wrapper">
+                <div class="card mb-6">
+                    <h3 class="mb-4">🎥 Project Presentation & Overview</h3>
+                    <p class="text-muted mb-6">Watch my professional presentation showcasing key projects, achievements, and insights into my work in Logistics & Supply Chain Management.</p>
+                    
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/ziGmOQ2913U" 
+                            title="Project Presentation" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="mb-4 text-primary">Presentation Highlights:</h4>
+                    <div class="grid grid-2">
+                        <ul class="text-muted" style="font-size: 0.875rem;">
+                            <li>✓ Project Overview</li>
+                            <li>✓ Key Challenges</li>
+                            <li>✓ Solutions Implemented</li>
+                        </ul>
+                        <ul class="text-muted" style="font-size: 0.875rem;">
+                            <li>✓ Results & Impact</li>
+                            <li>✓ Lessons Learned</li>
+                            <li>✓ Future Vision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" style="background: rgba(30, 41, 59, 0.3);">
         <div class="container">
             <h2>Get In <span class="text-primary">Touch</span></h2>
             <div class="section-title-underline"></div>
@@ -729,6 +797,7 @@
                         <li><a href="#personal-life">Personal Life</a></li>
                         <li><a href="#resume">Resume</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#video">Video</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
